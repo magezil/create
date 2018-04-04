@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+echo -e "#!/usr/bin/python3\n\"\"\"\n    $2\n\"\"\"\n" > "$1"
+chmod u+x "$1"
+echo -e "### $1\n* $2\n" >> README.md
+echo -e "\n$3\n    \"\"\"\n        $4\n    \"\"\"\n" >> "$1"

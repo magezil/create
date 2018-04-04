@@ -1,0 +1,5 @@
+#!/bin/bash
+# Take new directory name and description of directory to update/create README
+echo $1' - '$2'  ' >> README.md
+mkdir $1
+echo -e '# '$1'\n\n## '$2 >> ./$1/README.md

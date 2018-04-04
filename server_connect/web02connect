@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+ssh -i ~/.ssh/id_rsa1 ubuntu@54.174.221.228

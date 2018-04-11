@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-header="test.h"
-echo -e "#include \"$header\"\n\n/**\n *\n */\n$2"> "$1"
+header="search_algos.h"
+echo -e "#include \"$header\"\n\n/**\n *  - $3\n */\n$2"> "$1"
 echo -e "### $1\n* $3\n* Prototype: \`$2\`\n" >> README.md
 sed -i '$i'"$2" "$header"

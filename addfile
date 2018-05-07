@@ -1,4 +1,8 @@
 #!/bin/bash
 
-echo -e "$2" > "$1"
-echo -e "### $1\n* $2\n" >> README.md
+if [ "$#" -lt 2 ]; then
+	echo "./addfile file_name description"
+else
+	echo -e "$2" > "$1"
+	echo -e "### $1\n* $2\n" >> README.md
+fi

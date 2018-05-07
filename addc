@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
-header="search_algos.h"
-echo -e "#include \"$header\"\n\n/**\n *  - $3\n */\n$2"> "$1"
-echo -e "### $1\n* $3\n* Prototype: \`$2\`\n" >> README.md
-sed -i '$i'"$2" "$header"
+if [ "$#" -lt 2 ]; then
+	echo "./addc file_name function_prototype description"
+	echo "Make sure header is set before use"
+else
+	header="search_algos.h"
+	echo -e "#include \"$header\"\n\n/**\n *  - $3\n */\n$2"> "$1"
+	echo -e "### $1\n* $3\n* Prototype: \`$2\`\n" >> README.md
+	sed -i '$i'"$2" "$header"
+fi
